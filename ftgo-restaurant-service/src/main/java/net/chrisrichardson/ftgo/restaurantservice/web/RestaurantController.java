@@ -1,6 +1,7 @@
 package net.chrisrichardson.ftgo.restaurantservice.web;
 
 import net.chrisrichardson.ftgo.restaurantservice.domain.Restaurant;
+import net.chrisrichardson.ftgo.restaurantservice.domain.RestaurantMenu;
 import net.chrisrichardson.ftgo.restaurantservice.domain.RestaurantService;
 import net.chrisrichardson.ftgo.restaurantservice.domain.CreateRestaurantRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class RestaurantController {
   }
 
   private GetRestaurantResponse makeGetRestaurantResponse(Restaurant r) {
-    return new GetRestaurantResponse(r.getId(), r.getName());
+    return new GetRestaurantResponse(r.getId(), r.getName(), r.getMenu());
   }
 
 

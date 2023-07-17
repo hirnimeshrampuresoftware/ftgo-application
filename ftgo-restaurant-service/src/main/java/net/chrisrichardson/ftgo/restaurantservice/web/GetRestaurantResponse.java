@@ -1,8 +1,17 @@
 package net.chrisrichardson.ftgo.restaurantservice.web;
 
-public class GetRestaurantResponse {
-  private Long id;
+import net.chrisrichardson.ftgo.restaurantservice.domain.RestaurantMenu;
 
+public class GetRestaurantResponse {
+
+  private RestaurantMenu menu;
+
+  public RestaurantMenu getMenu() {
+    return menu;
+  }
+
+  private Long id;
+  
   public Long getId() {
     return id;
   }
@@ -24,8 +33,9 @@ public class GetRestaurantResponse {
   public GetRestaurantResponse() {
   }
 
-  public GetRestaurantResponse(Long id, String name) {
+  public GetRestaurantResponse(Long id, String name, RestaurantMenu menu) {
     this.id = id;
     this.name = name;
+    this.menu = menu;
   }
 }

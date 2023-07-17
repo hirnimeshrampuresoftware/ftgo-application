@@ -9,6 +9,7 @@ public class CreateConsumerResponse {
 
   public void setConsumerId(long consumerId) {
     this.consumerId = consumerId;
+    System.out.println(consumerId);
   }
 
   public CreateConsumerResponse() {

@@ -251,7 +251,7 @@ services:
       SPRING_ZIPKIN_BASE_URL: http://zipkin:9411/
 
   zipkin:
-      image: openzipkin/zipkin:2.21
+      image: openzipkin/zipkin:2
       ports:
        - "9411:9411"
       environment:
@@ -276,7 +276,7 @@ services:
       AWS_REGION: ${AWS_REGION:-us-west-2}
 
   kafka-gui:
-    image: quay.io/cloudhut/kowl:master-1d07695
+    image: rsmnarts/kowl:latest
     ports:
       - 9088:8080
     depends_on:
